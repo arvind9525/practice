@@ -1,0 +1,77 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>java script</title>
+	<script>
+		function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i}; 
+  return i;
+}
+	</script>
+</head>
+
+
+	<body onload="statrttime()";>
+
+	<div class="main">
+		<div class="container">
+			<div class="timeArea">
+				<div id="txt">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#test{
+			color:red;
+			text-align:center;
+			font-family:sans-serif;
+			font-size:200px;
+			margin-top: 200px;
+		}
+
+	</style>
+	<script>
+		setInterval(function(){ 
+			var x=new Date();
+			var	h=x.getHours();
+			var m=x.getMinutes();
+			var s=x.getSeconds();
+			document.getElementById('test').innerHTML=  h + ":" + m + ":" + s;
+
+			
+			console.log(x)
+
+
+			; }, 1000);
+
+	</script>	
+
+</head>
+<body>
+
+	<h1 id="test"></h1>
+</body>
+</html>
